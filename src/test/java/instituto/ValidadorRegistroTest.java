@@ -12,7 +12,7 @@ public class ValidadorRegistroTest {
     @Test
     @DisplayName("Ejemplo: Un nombre válido debe ser aceptado")
     public void testNombreValido() {
-        
+
         // Ejecutamos la lógica con un nombre correcto
         boolean resultado = validador.validarNombre("Carlos");
 
@@ -29,7 +29,7 @@ public class ValidadorRegistroTest {
 
         boolean esValido = nom.length() > 0;
 
-        assertFalse(esValido, "El sistema deberia rechazar el nombre");
+        assertFalse(esValido, "Error: El sistema acepto un nombre vacio");
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ValidadorRegistroTest {
 
         boolean esValido = Password >= 8;
 
-        assertTrue(esValido, "El sistema deberia aceptar la contraseña");
+        assertTrue(esValido, "Error: El sistema acepto una contraseña mas corta de 8");
     }
 
     @Test
@@ -49,7 +49,7 @@ public class ValidadorRegistroTest {
 
         boolean esValido = Password.length() >= 8;
 
-        assertFalse(esValido, "El sistema deberia rechazar la contraseña");
+        assertFalse(esValido, "Error: El sistema acepto una contraseña mas corta");
 
     }
 
@@ -60,7 +60,7 @@ public class ValidadorRegistroTest {
 
         boolean esValido = email.contains("@");
 
-        assertFalse(esValido, "El sistema deberis rechazar el email sin @");
+        assertFalse(esValido, "Error: El sistema acepto un email sin @");
 
     }
 
@@ -71,6 +71,6 @@ public class ValidadorRegistroTest {
 
         boolean esValido = edadUsuario >=16;
 
-        assertTrue(esValido, "El sistema deberia aceptar la edad limite");
+        assertTrue(esValido, "Error: El sistema rechazo la edad limite de 16");
     }
 }
