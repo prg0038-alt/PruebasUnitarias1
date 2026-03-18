@@ -12,6 +12,7 @@ public class ValidadorRegistroTest {
     @Test
     @DisplayName("Ejemplo: Un nombre válido debe ser aceptado")
     public void testNombreValido() {
+        
         // Ejecutamos la lógica con un nombre correcto
         boolean resultado = validador.validarNombre("Carlos");
 

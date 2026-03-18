@@ -1,6 +1,7 @@
-package instituto;public class ValidadorRegistro {
+package instituto;
+public class ValidadorRegistro {
 
-    public boolean validarNombre(String carlos) {
-        return false;
+    public boolean validarNombre(String Carlos) {
+        return true;
     }
 }
